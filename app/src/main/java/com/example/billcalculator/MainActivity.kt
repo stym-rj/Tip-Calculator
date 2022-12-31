@@ -3,6 +3,7 @@ package com.example.billcalculator
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.MaterialTheme
@@ -43,7 +44,12 @@ fun TipTimeScreen() {
 
     var amountInput by remember { mutableStateOf("") }
     val amount = amountInput.toDoubleOrNull() ?: 0.0
-    val tip = calculateTip(amount)
+
+    var percentInput by remember { mutableStateOf("") }
+    val percent = percentInput.toDoubleOrNull() ?: 0.0
+
+
+    val tip = calculateTip(amount, percent)
 
     Column(
         modifier = Modifier
@@ -62,7 +68,19 @@ fun TipTimeScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        EnterTextField(value = amountInput, onValueChange = {amountInput = it})
+        EnterTextField(
+            label = R.string.bill_amount,
+            value = amountInput,
+            onValueChange = {amountInput = it}
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        EnterTextField(
+            label = R.string.how_was_the_service,
+            value = percentInput,
+            onValueChange = {percentInput = it}
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -77,7 +95,11 @@ fun TipTimeScreen() {
 }
 
 @Composable
-fun EnterTextField(value : String, onValueChange : (String) -> Unit) {
+fun EnterTextField(
+    @StringRes label : Int,
+    value : String,
+    onValueChange : (String) -> Unit
+) {
 
     Column (
         horizontalAlignment = Alignment.CenterHorizontally
@@ -85,7 +107,7 @@ fun EnterTextField(value : String, onValueChange : (String) -> Unit) {
         TextField(
             value = value,
             onValueChange = onValueChange,
-            label = { Text(text = stringResource(id = R.string.bill_amount))},
+            label = { Text(text = stringResource(id = label))},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             singleLine = true,
             modifier = Modifier
@@ -94,7 +116,10 @@ fun EnterTextField(value : String, onValueChange : (String) -> Unit) {
     }
 }
 
-private fun calculateTip(amount : Double, tipPercentage : Double = 15.0) : String {
+private fun calculateTip(
+    amount : Double,
+    tipPercentage : Double = 15.0
+) : String {
     val tip = (tipPercentage / 100) * amount
     return NumberFormat.getCurrencyInstance().format(tip)
 }
