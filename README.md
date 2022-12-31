@@ -3,16 +3,22 @@ Tip Calculator android app built using Kotlin and Jetpack Compose
 
 Here are some Screenshots attached : 
 
-The initial UI - 
 
-<img src="https://user-images.githubusercontent.com/62481122/210085126-5d32c330-0965-4e6d-8f64-f66d8d89564c.png" width="280" height="500">
+UPDATED!
+
+version 2.0
+-> added another input area where user can input tip percentage manually instead of it being hardcoded to 15% of the total bill amount.
+
+The initial UI -
+
+<img src="https://user-images.githubusercontent.com/62481122/210136906-cd4a33e7-7770-4532-bc01-ea324f32be13.png" width="250" height="500">
 
 When the user gives a valid input - 
 
-<img src="https://user-images.githubusercontent.com/62481122/210085168-30bf0c6f-8eaf-4bc0-ada8-7604b5a69acb.png" width="280" height="500">
+<img src="https://user-images.githubusercontent.com/62481122/210136933-8a892011-4a42-408c-9c9e-d721551ff39e.png" width="250" height="500">
 
-<img src="https://user-images.githubusercontent.com/62481122/210085172-151f375f-c342-47fa-adc8-6ab63f70f050.png" width="280" height="500">
+<img src="https://user-images.githubusercontent.com/62481122/210136936-5d995f18-6c38-45b6-884d-64b4455fcd92.png" width="250" height="500">
 
-When the user gives an invalid input - 
 
-<img src="https://user-images.githubusercontent.com/62481122/210085180-d8ac1caf-10ce-41f0-984f-c002cb2eeba4.png" width="280" height="500">
+<img src="https://user-images.githubusercontent.com/62481122/210136930-0a9cbabf-b7ff-4d42-998d-6ef56419eba8.png" width="250" height="500">
+
