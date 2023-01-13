@@ -17,7 +17,7 @@ The initial UI -
 
 When the user gives a valid input - 
 
-<https://user-images.githubusercontent.com/62481122/212397329-6850d306-c50c-4563-a909-c76cdcf4e319.png" width="250" height="500">
+<img src="https://user-images.githubusercontent.com/62481122/212397329-6850d306-c50c-4563-a909-c76cdcf4e319.png" width="250" height="500">
 
 <img src="https://user-images.githubusercontent.com/62481122/212397335-604830a4-fb85-44df-9884-f1991a7b6b13.png" width="250" height="500">
 
